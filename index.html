@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diesel Generator + Solar Power Calculator</title>
+    <!-- Linking the updated CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="header">
+            <h1>Diesel Generator + Solar Power Calculator</h1>
+            <p class="description">Calculate the CO₂ emissions and cost savings by replacing your diesel generator with solar power.</p>
+        </div>
+
+        <!-- Input Section -->
+        <section class="input-section">
+            <h2>Input Data</h2>
+            <div class="form-group">
+                <label for="generatorPower">Power Rating of Diesel Generator (kW):</label>
+                <input type="number" id="generatorPower" placeholder="Enter kW" />
+            </div>
+            <div class="form-group">
+                <label for="operatingHours">Operating Hours per Day:</label>
+                <input type="number" id="operatingHours" placeholder="Enter hours/day" />
+            </div>
+            <div class="form-group">
+                <label for="fuelEfficiency">Fuel Efficiency (liters/hour):</label>
+                <input type="number" id="fuelEfficiency" placeholder="Enter liters/hour" />
+            </div>
+            <div class="form-group">
+                <label for="dieselPrice">Diesel Price (per liter, PKR):</label>
+                <input type="number" id="dieselPrice" placeholder="Enter price in PKR" />
+            </div>
+            <div class="form-group">
+                <label for="co2Factor">Carbon Emissions Factor (kg CO₂/liter):</label>
+                <input type="number" id="co2Factor" placeholder="Enter emissions factor" />
+            </div>
+
+            <h2>Solar Panel System</h2>
+            <div class="form-group">
+                <label for="solarCapacity">Solar Panel Capacity (kW):</label>
+                <input type="number" id="solarCapacity" placeholder="Enter kW" />
+            </div>
+            <div class="form-group">
+                <label for="sunHours">Average Sun Hours per Day:</label>
+                <input type="number" id="sunHours" placeholder="Enter sun hours" />
+            </div>
+            <div class="form-group">
+                <label for="installationCost">Solar Panel Installation Cost (PKR):</label>
+                <input type="number" id="installationCost" placeholder="Enter installation cost" />
+            </div>
+            <div class="form-group">
+                <label for="maintenanceCost">Annual Maintenance Cost (PKR):</label>
+                <input type="number" id="maintenanceCost" placeholder="Enter maintenance cost" />
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <h2>Results</h2>
+            <div class="result-group">
+                <p><strong>Fuel Consumption per Day:</strong> <span id="fuelConsumption">0</span> liters</p>
+                <p><strong>Operating Cost per Day:</strong> <span id="operatingCost">0</span> PKR</p>
+                <p><strong>CO₂ Emissions per Day:</strong> <span id="co2Emissions">0</span> kg CO₂</p>
+                <p><strong>Solar Energy Production per Day:</strong> <span id="solarEnergy">0</span> kWh</p>
+                <p><strong>CO₂ Offset per Day:</strong> <span id="co2Offset">0</span> kg CO₂</p>
+                <p><strong>Payback Period for Solar Panels:</strong> <span id="paybackPeriod">0</span> years</p>
+            </div>
+        </section>
+
+        <!-- Calculate Button -->
+        <button class="calculate-btn" onclick="calculateResults()">Calculate</button>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
